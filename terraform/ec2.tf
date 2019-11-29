@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "jenkins" {
-  ami           = "ami-091e3fae178527fb8"
+  ami           = "ami-064555f8407633cb0"
   instance_type = "t2.micro"
   key_name      = "graduation_work"
   tags = {
@@ -27,4 +27,9 @@ resource "aws_instance" "docker1" {
   tags = {
     Name = "Docker1"
   }
+}
+
+resource "aws_ecr_repository" "docker_d" {
+  name                 = "docker_d"
+  image_tag_mutability = "MUTABLE"
 }
