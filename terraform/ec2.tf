@@ -30,7 +30,7 @@ resource "aws_instance" "docker1" {
   }
 }
 
-resource "aws_ecr_repository" "docker_d" {
-  name                 = "docker_d"
+resource "aws_ecr_repository" "hello_world" {
+  name                 = "hello_world"
   image_tag_mutability = "MUTABLE"
 }
