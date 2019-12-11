@@ -3,8 +3,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "jenkins" {
-  ami           = "ami-064555f8407633cb0"
+  ami           = "ami-0362278b9e56d43bf"
   instance_type = "t2.micro"
+  iam_instance_profile = "graduation_work"
   key_name      = "graduation_work"
   tags = {
     Name = "Jenkins"

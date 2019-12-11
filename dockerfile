@@ -1,4 +1,3 @@
-FROM ubuntu:18.04
-RUN apt-get update
-RUN apt-get install -y curl
+FROM nginx
 
+COPY index.html /usr/share/nginx/html/index.html
