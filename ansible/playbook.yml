@@ -1,6 +1,6 @@
 - name: Configuration and deployment
   gather_facts: true
-  hosts: tag_Name_Docker
+  hosts: tag_Name_Docker1
   become: yes
   tasks:
     - name: Install apt dependencies
@@ -14,6 +14,6 @@
     - name: Run container
       docker_container:
           name: nginx
-          image: nginx
+          image: dmitrybaranovsky/hello_world
           ports:
           - '80:80'
