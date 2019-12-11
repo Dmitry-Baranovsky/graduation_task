@@ -11,6 +11,7 @@
     - name: Install python dependencies
       pip:
           name: docker
+          executable: pip
     - name: Run container
       docker_container:
           name: nginx
