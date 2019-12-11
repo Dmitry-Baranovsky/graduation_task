@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "jenkins" {
-  ami           = "ami-0362278b9e56d43bf"
+  ami           = "ami-070b88e79233cdfa0"
   instance_type = "t2.micro"
   iam_instance_profile = "graduation_work"
   key_name      = "graduation_work"
@@ -12,25 +12,20 @@ resource "aws_instance" "jenkins" {
   }
 }
 
-resource "aws_instance" "docker2" {
+resource "aws_instance" "qa" {
   ami           = "ami-0ee22ce00800c268d"
   instance_type = "t2.micro"
   key_name      = "graduation_work"
   tags = {
-    Name = "Docker2"
+    Name = "QA"
   }
 }
 
-resource "aws_instance" "docker1" {
+resource "aws_instance" "ci" {
   ami           = "ami-0ee22ce00800c268d"
   instance_type = "t2.micro"
   key_name      = "graduation_work"
   tags = {
-    Name = "Docker1"
+    Name = "CI"
   }
-}
-
-resource "aws_ecr_repository" "hello_world" {
-  name                 = "hello_world"
-  image_tag_mutability = "MUTABLE"
 }

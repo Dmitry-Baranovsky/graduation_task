@@ -1,6 +1,6 @@
 - name: Configuration and deployment
   gather_facts: true
-  hosts: tag_Name_Docker1
+  hosts: tag_Name_CI
   become: yes
   tasks:
     - name: Install apt dependencies
