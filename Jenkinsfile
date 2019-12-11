@@ -1,6 +1,6 @@
 node {
   stage ('Checkout') {
-    git 'https://github.com/Dmitry-Baranovsky/graduation_task'
+    checkout scm
   }
  
   stage ('Docker build') {
