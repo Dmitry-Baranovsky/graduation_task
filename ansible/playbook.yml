@@ -15,6 +15,7 @@
       docker_container:
           name: nginx
           recreate: yes
+          pull: true
           image: dmitrybaranovsky/hello_world
           ports:
           - '80:80'
