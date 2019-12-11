@@ -14,7 +14,7 @@ node {
   }
   
   stage ('Deploy to CI') {
-      sh "ansible-playbook -i ansible/ec2.py -u ubuntu ansible/playbook.yml --limit 'tag_Name_Docker1'"
+      sh "ansible-playbook -i ansible/ec2.py -u ubuntu ansible/playbook.yml"
   }
 }
 
