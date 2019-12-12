@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "jenkins" {
-  ami           = "ami-070b88e79233cdfa0"
+  ami           = "ami-068ef28dd132b6875"
   instance_type = "t2.micro"
   iam_instance_profile = "graduation_work"
   key_name      = "graduation_work"
